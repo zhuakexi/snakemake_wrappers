@@ -14,13 +14,11 @@ untrimmed_paired_output = snakemake.output.get("untrimmed_paired_output")
 output = snakemake.output.get("output")
 paired_output = snakemake.output.get("paired_output")
 
-extra = snakemake.params.get("extra")
 adapter = snakemake.params.get("adapter")
 threads = snakemake.threads
 
 shell(
     "cutadapt" 
-    " {extra} " # positional options
     " {adapter} " # action + sequece
     " -j {threads} "
     "--untrimmed-output {untrimmed_output}"
