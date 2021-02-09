@@ -21,10 +21,10 @@ shell(
     "cutadapt" 
     " {adapter} " # action + sequece
     " -j {threads} "
-    "--untrimmed-output {untrimmed_output}"
-    "--untrimmed-paired-output {untrimmed_paired_output}"
-    "-o {output}"
-    "-p {paired_output}"
-    "{input.R1} {input.R2}"
-    "1> {log}"
+    " --untrimmed-output {untrimmed_output}"
+    " --untrimmed-paired-output {untrimmed_paired_output}"
+    " -o {output}"
+    " -p {paired_output}"
+    " {input.R1} {input.R2}"
+    " 1> {log}"
 )
